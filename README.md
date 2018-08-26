@@ -11,7 +11,7 @@ sudo docker-compose build
 sudo docker-compose up
 ```
 
-In a web browswer navigate to [localhost:80/align](http://localhost/align] (although you shouldn't need to specify port 80)
+In a web browswer navigate to [localhost/align](http://localhost/align)
 
 ![running docker-compose](https://github.com/pbybee/ProteinAlignment-django/blob/master/docker-compose-cmds.gif)
 
