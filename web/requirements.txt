@@ -1,0 +1,5 @@
+Django==2.1
+gunicorn
+psycopg2==2.7
+matplotlib
+numpy

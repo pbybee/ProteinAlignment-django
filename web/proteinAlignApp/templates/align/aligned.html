@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+{%block content%}
+<style>
+body {
+    background-color: #dbafa4;
+}
+.button {
+    background-color: #cae8ae; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {border-radius: 2px; color: black;}
+
+</style>
+<body>
+  <div>
+		<a href="/align" class="button button1">Click here to return to do another alignment</a>
+	</div>
+
+
+ <div><h2> Align</h></div>
+ <p>
+<span class="nowrap">
+ {{ alignedStrings.alignedV }}
+ </span><br><br>
+ <div><h2> Ref</h></div>
+ <p>
+<span class="nowrap">
+ {{ alignedStrings.alignedW }}
+ </span><br><br>
+
+ This plot shows the penalties in blue(see legend) of choosing one alignment over another. The red shows the path taken through the alignment to maximize the score of the alignment. To do this, first all the penalties are calculated and stored. The optimal end point is known and a backtrack can be done to find the best alignment.
+ For more information about this algorithm go here: <a href="https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm">Needleman-Wunsch algorithm</a>
+
+</p>
+
+<img src="{% static 'traceRoute.png' %}">
+<!--<img src="/home/ptb/projects/proteinAlignSite/static/traceRoute.png">-->
+<p>For example</p>
+<img src="{% static 'sequenceAlignExample.png' %}">
+<!--<img src="static/sequenceAlignExample.png"/>-->
+</body>
+{%endblock%}
+</html>

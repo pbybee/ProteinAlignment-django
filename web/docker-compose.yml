@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+    web:
+      build: .
+      command: /usr/local/bin/gunicorn proteinAlignSite.wsgi:application -w 2 -b :8000
+      ports:
+        - "8000:8000"
+      volumes:
+        - .:/web
+      depends_on:
+        - db
+
+    nginx:
+      restart: always
+      build: ./nginx/
+      ports:
+        - "80:80"
+      volumes:
+        - /static:/static
+      volumes_from:
+        - web
+      links:
+        - web:web
+
+    db:
+      image: postgres:latest

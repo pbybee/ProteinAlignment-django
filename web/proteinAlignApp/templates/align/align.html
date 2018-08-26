@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+{%block content%}
+
+
+<style>
+body {
+    background-color: #dbafa4;
+}
+
+.button {
+    background-color: #cae8ae; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {border-radius: 2px; color: black;}
+
+</style>
+<body>
+	<div>
+		<a href="/aligned" class="button button1">Click here to see a previous alignment</a>
+	</div>
+	<div>
+		<form method="POST">{% csrf_token %}
+			{{form.as_p}}
+			<button type="submit" style="color: black">Submit Strings for alignment</button>
+
+		</form>
+	</div>
+</body>
+
+
+{%endblock%}
