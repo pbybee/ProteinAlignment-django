@@ -7,7 +7,8 @@ To run this site. Clone the repo and run docker-compose commands.
 ```git clone git@github.com:pbybee/ProteinAlignment-django.git
 cd ProteinAlignment-django/web
 sudo docker-compose build
-sudo docker-compose up```
+sudo docker-compose up
+```
 
 In a web browswer navigate to [localhost:80/align](localhost/align](although you shouldn't need to specify port 80)
 
