@@ -4,7 +4,8 @@ This is a simple protein alignment app written for django with nginx webserver, 
 
 To run this site. Clone the repo and run docker-compose commands.
 
-```git clone git@github.com:pbybee/ProteinAlignment-django.git
+```
+git clone git@github.com:pbybee/ProteinAlignment-django.git
 cd ProteinAlignment-django/web
 sudo docker-compose build
 sudo docker-compose up
