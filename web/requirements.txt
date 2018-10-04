@@ -1,4 +1,4 @@
-Django==2.2
+Django==2.1.2
 gunicorn
 psycopg2==2.7
 matplotlib
